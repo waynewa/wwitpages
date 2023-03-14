@@ -78,6 +78,8 @@
   align-items: center;
   position: relative;
   padding: 4rem 0;
+  font-size: 2rem;
+  color: rgb(78, 76, 76);
 }
 
 .center::before {

@@ -1,9 +1,7 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
-import styles from '@/styles/Home.module.css'
-
-const inter = Inter({ subsets: ['latin'] })
+import Head from 'next/head';
+import styles from '@/styles/Home.module.css';
+import projects from '../assets/data/data';
+import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -11,26 +9,35 @@ export default function Home() {
       <Head>
         <title>WWiT Pages</title>
       </Head>
-      <main className={styles.main}>
-          <h1>WWiT Pages</h1>
-          <p> The purpose of this page is to showcase the various aspects of development and test automation that have been undertaken by the WWiT team. The listed repositories have been created and are currently being maintained by the WWiT developer.
-            For additional information about WWiT, please visit their website at https://wwit.netlify.app.
-          </p>
-          <h3>Test Automation projects</h3>
-          <ul>
-            <li >
-              WWiTSeleniumBase - This project is a C# based selenium framework - https://github.com/waynewa/WWiTSeleniumBase
-
-            </li>
-
-            <li>
-              WWiTSeleniumJ - This project is a Java based selenium framework - https://github.com/waynewa/WWiTSeleniumJ
-            </li>
-          </ul>
-          <h3>Development Projects</h3>
-          <ul>
-            <li >WWiT WebSite - This project is linked to the WWiT Website - https://github.com/waynewa/wwit</li></ul>
+      <main >
+      <section className={styles.center}>
+      <div className={styles.card}>
+       <Link href="https://wwit.netlify.app"> <img src="favicon.ico" alt="WWiT" />
+        <h3 >Projects</h3>
+        </Link>
+      </div>
+      </section>
+      <section className={styles.card}>
+        <div>
+          {projects.map((project) => {
+            const { id, name, description, url, type, image } = project;
+            return (
+              <article key={id} className={styles.card}>
+                <div>
+                  <h5>{name}</h5>
+                  <p>{description}</p>
+                  <p>
+                    <Link href={url}>{url}</Link>
+                  </p>
+                  <p>{type}</p>
+                  <img src={image} alt={name} width={100} />
+                </div>
+              </article>
+            );
+          })}
+        </div>
+        </section>
       </main>
     </>
-  )
+  );
 }
