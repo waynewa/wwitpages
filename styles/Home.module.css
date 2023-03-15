@@ -7,6 +7,18 @@
   min-height: 100vh;
 }
 
+.head{
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  padding: 0.1rem;
+
+}
+.project{
+  color:rgb(94, 86, 86);
+  display: flex;
+  justify-content: center;
+}
 .description {
   display: inherit;
   justify-content: inherit;
@@ -69,7 +81,7 @@
   opacity: 0.6;
   font-size: 0.9rem;
   line-height: 1.5;
-  max-width: 30ch;
+  max-width: 100ch;
 }
 
 .center {

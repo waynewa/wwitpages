@@ -9,33 +9,45 @@ export default function Home() {
       <Head>
         <title>WWiT Pages</title>
       </Head>
-      <main >
-      <section className={styles.center}>
-      <div className={styles.card}>
-       <Link href="https://wwit.netlify.app"> <img src="favicon.ico" alt="WWiT" />
-        <h3 >Projects</h3>
-        </Link>
-      </div>
-      </section>
-      <section className={styles.card}>
-        <div>
-          {projects.map((project) => {
-            const { id, name, description, url, type, image } = project;
-            return (
-              <article key={id} className={styles.card}>
-                <div>
-                  <h5>{name}</h5>
-                  <p>{description}</p>
-                  <p>
-                    <Link href={url}>{url}</Link>
-                  </p>
-                  <p>{type}</p>
-                  <img src={image} alt={name} width={100} />
-                </div>
-              </article>
-            );
-          })}
-        </div>
+      <main>
+        <section className={styles.head}>
+          <div>
+            <Link href='https://wwit.netlify.app'>
+              <img
+                src='favicon.ico'
+                alt='WWiT'
+                width={150}
+              />
+            </Link>
+          </div>
+        </section>
+        <section className={styles.card}>
+          <h3 className={styles.project}>Projects</h3>
+          <div>
+            {projects.map((project) => {
+              const { id, name, description, url, type, image } = project;
+              return (
+                <article
+                  key={id}
+                  className={styles.card}
+                >
+                  <div>
+                    <Link href={url}>
+                      <h5>{name}</h5>
+                      <p className={styles.desc}>{description}</p>
+                      <p>{url}</p>
+                      <p>{type}</p>
+                      <img
+                        src={image}
+                        alt={name}
+                        width={100}
+                      />
+                    </Link>
+                  </div>
+                </article>
+              );
+            })}
+          </div>
         </section>
       </main>
     </>
