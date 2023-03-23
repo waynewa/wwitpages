@@ -10,6 +10,15 @@ const projects = [
   },
   {
     id: 2,
+    name: 'SampleProjects',
+    description:
+      'This project includes Sapmle projects based on the C# WWiTSeleniumBase framework, It has sample tests for both GUI and API ',
+    url: 'https://github.com/waynewa/SampleProjects',
+    type: 'Test Automation',
+    image: 'favicon.ico',
+  },
+  {
+    id: 3,
     name: 'WWiTSeleniumJ',
     description:
       'This JAVA Selenium framework tests APIs, web UIs, and mobile applications. It utilizes the power of Selenium to automate the testing process, ensuring that everything works as intended. With its versatile capabilities, this framework provides a comprehensive solution for testing across multiple platforms.',
@@ -18,7 +27,7 @@ const projects = [
     image: 'favicon.ico',
   },
   {
-    id: 3,
+    id: 4,
     name: 'WWiT Website',
     description:
       'This webpage has been developed using React, a popular JavaScript library for building user interfaces. Its modern, component-based architecture allows for efficient development and maintenance of complex web applications. With its fast rendering and seamless data flow, this webpage provides a smooth and responsive user experience.',
@@ -27,7 +36,7 @@ const projects = [
     image: 'wwitscreenshot.jpg',
   },
   {
-    id: 4,
+    id: 5,
     name: '2 Plus Cleaning ',
     description:
       'This webpage has been developed using React and Vite, a popular JavaScript library for building user interfaces. Its modern, component-based architecture allows for efficient development and maintenance of complex web applications. With its fast rendering and seamless data flow, this webpage provides a smooth and responsive user experience.',
