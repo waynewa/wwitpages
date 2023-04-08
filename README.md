@@ -12,4 +12,4 @@ For additional information about WWiT, please visit their website at https://wwi
 
 ## Development Projects
 
-* WWiT WebSite - This project is linked to the WWiT Website - https://github.com/waynewa/wwit
+* WWiT WebSite - This project is linked to the WWiT Website - https://wwit.netlify.app
