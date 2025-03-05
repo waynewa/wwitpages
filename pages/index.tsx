@@ -74,6 +74,12 @@ export default function Home() {
           </div>
         </section>
       </main>
+      <footer>
+        <div className={styles.footer}>
+          <p>© Copywright WWiT {new Date().getFullYear()} - All Rights Reserved</p>
+
+        </div>
+      </footer>
     </>
   );
 }
