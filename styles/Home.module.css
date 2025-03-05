@@ -18,6 +18,7 @@
   color:rgb(94, 86, 86);
   display: flex;
   justify-content: center;
+  
 }
 .description {
   display: inherit;
@@ -57,7 +58,11 @@
   width: var(--max-width);
   max-width: 100%;
 }
+.container{
+  overflow-y: hidden;
+  max-width: 100%;
 
+}
 .card {
   padding: 1rem 1.2rem;
   border-radius: var(--border-radius);
@@ -66,7 +71,7 @@
 }
 
 .card span {
-  display: inline-block;
+  display: inline-flex;
   transition: transform 200ms;
 }
 
@@ -75,10 +80,8 @@
   margin-bottom: 0.7rem;
 }
 .card div {
-  display: inline-flex;
-  max-width: 60ch;
+  display: flex ;
   padding: 1rem 1.2rem;
-  
 }
 
 .card p {

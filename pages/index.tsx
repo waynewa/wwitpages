@@ -2,8 +2,31 @@ import Head from 'next/head';
 import styles from '@/styles/Home.module.css';
 import projects from '../assets/data/data';
 import Link from 'next/link';
+import { gsap } from 'gsap'
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import { useEffect } from "react";
+
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Home() {
+  // useEffect(() => {
+  //   const sections = gsap.utils.toArray(".panel");
+
+  //   gsap.to(sections, {
+  //     xPercent: -100 * (sections.length - 1),
+  //     ease: "none",
+  //     scrollTrigger: {
+  //       trigger: ".container",
+  //       pin: true,
+  //       invalidateOnRefresh: true,
+  //       anticipatePin: 1,
+  //       scrub: 1.23,
+  //       end: () => "+=" + document.querySelector(".container").offsetWidth
+  //     }
+  //   });
+  // }, []);
+
   return (
     <>
       <Head>
@@ -23,7 +46,7 @@ export default function Home() {
         </section>
         <section className={styles.card}>
           <h3 className={styles.project}>Projects</h3>
-          <div>
+          <div className={styles.container}>
             {projects.map((project) => {
               const { id, name, description, url, type, image } = project;
               return (
@@ -47,6 +70,7 @@ export default function Home() {
                 </article>
               );
             })}
+          
           </div>
         </section>
       </main>
