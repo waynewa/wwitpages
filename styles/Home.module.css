@@ -31,7 +31,7 @@
 }
 
 .description a {
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
   gap: 0.5rem;
@@ -52,7 +52,7 @@
 }
 
 .grid {
-  display: grid;
+  display: block;
   grid-template-columns: repeat(4, minmax(25%, auto));
   width: var(--max-width);
   max-width: 100%;
@@ -63,7 +63,6 @@
   border-radius: var(--border-radius);
   background: rgba(var(--card-rgb), 0);
   border: 1px solid rgba(var(--card-border-rgb), 0);
-  transition: background 200ms, border 200ms;
 }
 
 .card span {
@@ -75,13 +74,19 @@
   font-weight: 600;
   margin-bottom: 0.7rem;
 }
+.card div {
+  display: inline-flex;
+  max-width: 60ch;
+  padding: 1rem 1.2rem;
+  
+}
 
 .card p {
   margin: 0;
   opacity: 0.6;
   font-size: 0.9rem;
   line-height: 1.5;
-  max-width: 100ch;
+  width: 20rem;
 }
 
 .center {
@@ -207,7 +212,12 @@
   .card h2 {
     margin-bottom: 0.5rem;
   }
-
+  .card div {
+    display: block;
+    max-width: 60ch;
+    padding: 1rem 1.2rem;
+    
+  }
   .center {
     padding: 8rem 0 6rem;
   }
